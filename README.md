@@ -45,7 +45,7 @@ Changes should follow this flow path:
 stateDiagram-v2
 Main_Repo --> Your_Clone
 Your_Clone --> Your_Fork
-Your_Fork --> Main_repo
+Your_Fork --> Main_Repo
 ```
 
 Where "Your_Clone" is the version on your machine, "Your_Fork" is the version on your github account, and "Main_Repo" is the one you forked from.
