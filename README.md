@@ -43,9 +43,9 @@ Make sure that you are making changes on a branch other than main. Before you ma
 Changes should follow this flow path:
 ```mermaid
 stateDiagram-v2
-Main_Repo --> Your_Clone
-Your_Clone --> Your_Fork
-Your_Fork --> Main_Repo
+Main_Repo --> Your_Fork
+Your_Fork --> Your_Clone
+Your_Clone --> Main_Repo
 ```
 
 Where "Your_Clone" is the version on your machine, "Your_Fork" is the version on your github account, and "Main_Repo" is the one you forked from.
