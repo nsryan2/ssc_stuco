@@ -20,6 +20,14 @@ jobs:
 
     - name: Compile Bid Doc
       run: make -C ./proposal/ all-via-pdf
+    - name: Upload Bid pdf as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        path: ./github_artifacts
 
     - name: Compile Planning Doc
       run: make -C ./planning/ all-via-pdf
+    - name: Upload Planning pdf as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        path: ./github_artifacts
