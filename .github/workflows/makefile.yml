@@ -19,14 +19,20 @@ jobs:
       run: sudo apt-get update && sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super
 
     - name: Compile Bid Doc
+      working-directory: ${{ env.DIR }}
       run: make -C ./proposal/ all-via-pdf
+    - name: move
+      run: mkdir -p github_artifacts && mv ./${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
     - name: Upload Bid pdf as artifact
       uses: actions/upload-artifact@v2
       with:
         path: ./github_artifacts
 
     - name: Compile Planning Doc
+      working-directory: ${{ env.DIR }}
       run: make -C ./planning/ all-via-pdf
+    - name: move
+      run: mkdir -p github_artifacts && mv ./${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
     - name: Upload Planning pdf as artifact
       uses: actions/upload-artifact@v2
       with:
