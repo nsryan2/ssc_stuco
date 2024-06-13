@@ -1,6 +1,8 @@
 # ssc_stuco
 This repository houses the planning and bid documents for sections interested in hosting a student conference.
 
+PRs or merges to `main` will trigger the repo to compile both documents. They will appear as an artifact of the run.
+
 
 ## How to Compile
 
