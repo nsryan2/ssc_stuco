@@ -28,9 +28,10 @@ Ex: To make as a pdf, the full command should be: `make all-via-pdf`
 
 ## Committing to git
 This repo has a file instructing git to ignore all of the files generated from compiling, that is intentional.
+To learn more about setting up git go to [https://swcarpentry.github.io/git-novice/02-setup.html](https://swcarpentry.github.io/git-novice/02-setup.html).
 
 Make sure that you are making changes on a branch other than main. Before you make any changes:
-1. Add upstream remote with `git remote add upstream git@github.com:nsryan2/ssc_stuco.git` (you only have to do this once)*,
+1. add upstream remote with `git remote add upstream git@github.com:nsryan2/ssc_stuco.git` (you only have to do this once)*,
 2. make sure you're on the main branch with `git checkout main`,
 3. pull changes from the upstream to your main branch with `git pull upstream main`,
 4. create a new branch with `git checkout -b branch_name`,
