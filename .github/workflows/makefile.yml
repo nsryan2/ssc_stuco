@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Install TeXlive
       run: sudo apt-get update && sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super texlive-latex-extra
@@ -23,7 +23,7 @@ jobs:
     - name: move
       run: mkdir -p github_artifacts && mv ./proposal/propose_main.pdf ./github_artifacts/
     - name: Upload Bid pdf as artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         path: ./github_artifacts
 
@@ -33,6 +33,6 @@ jobs:
     - name: move
       run: mkdir -p github_artifacts && mv ./planning/planning_main.pdf ./github_artifacts/
     - name: Upload Planning pdf as artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         path: ./github_artifacts
