@@ -30,7 +30,7 @@ jobs:
     - name: Compile Planning Doc
       run: make -C ./planning/ all-via-pdf
     - name: move
-      run: mv ./planning/planning_main.pdf ./github_artifacts/
+      run: mv ./planning/plan_main.pdf ./github_artifacts/
     - name: Upload Planning pdf as artifact
       uses: actions/upload-artifact@v4
       with:
