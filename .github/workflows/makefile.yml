@@ -16,7 +16,12 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Install TeXlive
-      run: sudo apt-get update && sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super texlive-latex-extra
+      run: sudo apt-get update && sudo apt-get install texlive pandoc texlive-publishers texlive-science latexmk cm-super texlive-latex-extra
+
+    - name: Compile Conference Summary Doc
+      run: make -C ./conf_summary/ all-via-pdf
+    - name: move
+      run: mkdir -p github_artifacts && mv ./conf_summary/conf_summary.pdf ./github_artifacts/
 
     - name: Compile Bid Doc
       run: make -C ./proposal/ all-via-pdf
